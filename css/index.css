@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Azaret Mono';
+    src: url('../font/AzeretMono-VariableFont_wght.ttf');
+}
+
 :root {
     --bg-color: #FDFCF7;
     --contrast-color: #010103;
@@ -15,12 +20,14 @@
     --transition: 0.2s;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Azaret+Mono:wght@400;700&display=swap');
+
+
+
 
 * {
     color: var(--contrast-color);
 
-    font-family: "Azaret Mono", monospace;
+    font-family: Azaret Mono;
     font-size: 1rem;
 
     padding: 0%;
