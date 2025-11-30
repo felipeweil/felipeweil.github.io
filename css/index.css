@@ -96,7 +96,7 @@ ul, ol {
 #sticky {
     background-color: var(--bg-color);
     margin: 0%;
-    padding: 1%;
+    padding: 1rem;
     border-width: 1px;
     position: sticky;
     top: 0;
@@ -105,18 +105,19 @@ ul, ol {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1%;
+    gap: 1rem;
 
     z-index: 1;
 }
 
 #mar-2 {
-    margin: 5vh 10vw;
+    margin: 2rem 20vw;
 }
 
 .div-cont {
-    
-    padding: 1%;
+    margin-top: 1rem;
+    /* margin-bottom: 1rem; */
+    padding: 1rem;
     border-width: 1px;
 }
 
@@ -146,6 +147,10 @@ img {
     justify-content: center;
 }
 
+a.game-card {
+    text-decoration: none;
+}
+
 .game-card {
     background-color: var(--bg-color);
     border-width: var(--border-size);
@@ -163,8 +168,14 @@ img {
     align-items: center;
 }
 
-.game-card:hover {
+.game-card:hover, button:hover {
     box-shadow: 5px 5px 15px var(--contrast-color);
+}
+
+button {
+    background-color: var(--bg-color);
+    border-width: var(--border-size);
+    padding: 1rem;
 }
 
 
