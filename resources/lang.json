@@ -1,0 +1,212 @@
+[
+  {
+    "Key": "HEADER",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "btn_Translate",
+    "EN": "<span class='subtle-txt'>Translate</span>(ES);",
+    "ES": "<span class='subtle-txt'>Translate</span>(EN);"
+  },
+  {
+    "Key": "btn_ThemeDay",
+    "EN": "Theme<span>(Night)</span>;",
+    "ES": "Theme<span>(Noche)</span>;"
+  },
+  {
+    "Key": "btn_ThemeNight",
+    "EN": "Theme<span>(Day)</span>;",
+    "ES": "Theme<span>(Día)</span>;"
+  },
+  {
+    "Key": "title_AboutMe",
+    "EN": "About me",
+    "ES": "Sobre mí"
+  },
+  {
+    "Key": "txt_AboutMe",
+    "EN": "Responsible and committed. I enjoy learning new things and I am interested in improving the efficiency of my process. <br> <br> I consider myself a perceptive designer, focused on the sensorial. Within the projects I work on I tend to focus on the visual part while I give importance to the user experience.",
+    "ES": "Responsable y comprometido. Disfruto de aprender cosas nuevas y me intereso por mejorar la eficacia de mi proceso. <br> <br> Me considero un diseñador perceptivo, volcado en lo sensorial. Dentro de los proyectos en los que trabajo tiendo a enfocarme en la parte visual mientras que le doy importancia a la experiencia de usuario."
+  },
+  {
+    "Key": "title_ContactInfo",
+    "EN": "Contact information",
+    "ES": "Información de contacto"
+  },
+  {
+    "Key": "img_txt_CoreLoop",
+    "EN": "Me if I was a core loop",
+    "ES": "Yo si fuese un core loop"
+  },
+  {
+    "Key": "img_alt_CoreLoop",
+    "EN": "Me if I was a core loop. It goes like this: .",
+    "ES": "Yo si fuese un core loop. Dice así: ."
+  },
+  {
+    "Key": "",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "CONTENT",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "title_section_VG",
+    "EN": "VIDEOGAMES",
+    "ES": "VIDEOJUEGOS"
+  },
+  {
+    "Key": "",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "img_txt_StampColoratura",
+    "EN": "Stamp_Coloratura",
+    "ES": "Sello_Coloratura"
+  },
+  {
+    "Key": "img_alt_StampColoratura",
+    "EN": "Stamp of the game Coloratura",
+    "ES": "Sello del juego Coloratura"
+  },
+  {
+    "Key": "h2_Coloratura",
+    "EN": "class <span class=\"title-txt\">Coloratura</span> : Internship <br> <br>",
+    "ES": "class <span class=\"title-txt\">Coloratura</span> : Prácticas en empresa <br> <br>"
+  },
+  {
+    "Key": "txt_Coloratura_Description",
+    "EN": "",
+    "ES": "<span class=\"subtle-txt\">&emsp;&emsp;&emsp;&emsp;/* </span>\nUna <span class=\"genre-txt\">aventura narrativa</span> diseñada para ser jugada sin elementos visuales. Es interesante y divertido tanto para <span class=\"strong-txt\">jugadores invidentes</span> como videntes.\n<span class=\"subtle-txt\"> */</span>"
+  },
+  {
+    "Key": "",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "img_txt_StampSuot",
+    "EN": "Stamp_",
+    "ES": "Sello_"
+  },
+  {
+    "Key": "img_alt_StampSuot",
+    "EN": "Stamp of the game",
+    "ES": "Sello del juego"
+  },
+  {
+    "Key": "h2_Suot",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "txt_Suot_Description",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "img_txt_StampMoonV",
+    "EN": "Stamp_MoonVoyage",
+    "ES": "Sello_MoonVoyage"
+  },
+  {
+    "Key": "img_alt_StampMoonV",
+    "EN": "Stamp of the game Moon Voyage",
+    "ES": "Sello del juego Moon Voyage"
+  },
+  {
+    "Key": "h2_MoonV",
+    "EN": "class <span class=\"title-txt\">Moon Voyage</span> : Project in Google Play<br> <br>",
+    "ES": "class <span class=\"title-txt\">Moon Voyage</span> : Proyecto en Google Play <br> <br>"
+  },
+  {
+    "Key": "txt_MoonV_Description",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "btn_MoonV_Play",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "img_txt_StampMoleMola",
+    "EN": "Stamp_MoleMola",
+    "ES": "Sello_MoleMola"
+  },
+  {
+    "Key": "img_alt_StampMoleMola",
+    "EN": "Stamp of the game Mole Mola",
+    "ES": "Sello del juego Mole Mola"
+  },
+  {
+    "Key": "h2_MoleMola",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "txt_MoleMola_Description",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "img_txt_StampThisWeb",
+    "EN": "Stamp_ThisWeb",
+    "ES": "Sello_EstaWeb"
+  },
+  {
+    "Key": "img_alt_StampThisWeb",
+    "EN": "Stamp that says \"This web!",
+    "ES": "Sello que pone \"¡Esta web!"
+  },
+  {
+    "Key": "h2_ThisWeb",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "txt_ThisWeb_Description",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "title_section_Web",
+    "EN": "WEB",
+    "ES": "WEB"
+  },
+  {
+    "Key": "",
+    "EN": "",
+    "ES": ""
+  },
+  {
+    "Key": "title_section_Music",
+    "EN": "MUSIC",
+    "ES": "MÚSICA"
+  }
+]

@@ -19,8 +19,9 @@
             <a href="index.html">
                 <button> <span class="subtle-txt">Go</span>(<span class="strong-txt">Home</span>) </button>
             </a>
-            <button> <span class="subtle-txt">Translate</span>(ES) </button>
-            <button id="toggle-theme"> <span class="subtle-txt">Mode</span>(Night) </button>
+            <button id="lang-es" data-i18n="btn_Translate"> <span class="subtle-txt">Translate</span>(ES) </button>
+            <button id="lang-en" data-i18n="btn_Translate"> <span class="subtle-txt">Translate</span>(ES) </button>
+            <button id="toggle-theme" data-i18n="btn_ThemeNight"> <span class="subtle-txt">Mode</span>(Night) </button>
         </section>
 
         <!-- Header -->
@@ -30,9 +31,9 @@
                 <h1>Felipe Weil</h1>
 
                 <div class="div-cont">
-                    <h2>About me</h2>
+                    <h2 data-i18n="title_AboutMe">About me</h2>
                     <br>
-                    <p>
+                    <p data-i18n="txt_AboutMe">
                         Responsable y comprometido. Disfruto de aprender cosas nuevas  y me intereso por mejorar la eficacia de mi proceso.
                         <br> <br>
                         Me considero un diseñador perceptivo, volcado en lo sensorial. Dentro de los proyectos en los que trabajo tiendo a enfocarme en la parte visual mientras que le doy importancia a la experiencia de usuario.
@@ -40,7 +41,7 @@
                 </div>
                 
                 <div class="div-cont">
-                    <h2>Información de contacto</h2>
+                    <h2 data-i18n="title_ContactInfo">Información de contacto</h2>
                     <br>
                     <p><a href="mailto:felipeweilmar@gmail.com">felipeweilmar@gmail.com</a> (copy to clipboard)</p>
                     <br>
@@ -66,20 +67,27 @@
             <div class="project-cont parent">
                 <div class="enter-line"></div>
                 
-                <a href="html/content.html" class="game-card"> <!-- proyect card -->
-                    <div class="img-cont parent"> <!-- stamp cont -->
-                        <div><p class="img-txt">Sello_Coloratura</p></div>
+                <!-- COLORATURA card -->
+                <a href="html/content.html" class="game-card">
+                    <!-- stamp cont -->
+                    <div class="img-cont parent">
+                        <div><p class="img-txt" data-i18n="img_txt_StampColoratura">Sello_Coloratura</p></div>
                         <img src="media/Stamp_Coloratura.png" alt="Sello del juego Coloratura">
                     </div>
                     
-                    <div> <!-- text cont -->
-                        <div> <!-- using cont -->
-                            <p class="subtle-txt">using <span>Unity Engine</span>; <br> <br> </p>
+                    <!-- text cont -->
+                    <div>
+                        <!-- using cont -->
+                        <div> 
+                            <p class="subtle-txt">using <span>Unity Engine</span>;</p>
+                            <br>
                         </div>
                         
-                        <h2 class="subtle-txt">class <span class="title-txt">Coloratura</span> : Prácticas en empresa <br> <br></h2>
+                        <h2 class="subtle-txt">class <span class="title-txt">Coloratura</span> : Prácticas en empresa</h2>
+                        <br>
                         
-                        <div> <!-- description -->
+                        <!-- description -->
+                        <div>
                             <p class="subtle-txt">{ </p>
                             <p>
                                 <span class="subtle-txt">&emsp;&emsp;&emsp;&emsp;/* </span>
@@ -98,7 +106,7 @@
         <!-- Proceso -->
         <section  id="mar-2">
             <div class="div-cont">
-                <h2>Proceso</h2>
+                <h2 data-i18n="title_Process">Proceso</h2>
                 <br>
                 <p>
                     Mi proceso: 
@@ -118,7 +126,7 @@
         <!-- Experiencia laboral -->
         <section  id="mar-2">
             <div class="div-cont">
-                <h2>Experiencia</h2>
+                <h2 data-i18n="title_Experience">Experiencia</h2>
                 <br>
                 <p>
                     Estudié la carrera de Diseño y Desarrollo de Videojuegos en <a href="https://www.udit.es/" target="_blank">UDIT - Universidad de Diseño, Innovación y Tecnología</a>. Cursé desde el año 2022 hasta graduarme en la rama de <span class="strong-txt">diseño</span> en 2026. 
@@ -149,11 +157,11 @@
             
         <!-- Footer -->
         <section>
-            <h2>Información de contacto</h2>
-                    <br>
-                    <p><a href="mailto:felipeweilmar@gmail.com">felipeweilmar@gmail.com</a> (copy to clipboard)</p>
-                    <br>
-                    <a href="https://www.linkedin.com/in/felipe-weil-8b4062328?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bzz2eNYKAT%2BmgnpCFpg3GwQ%3D%3D" target="_blank">LinkedIn.com</a>
+            <h2 data-i18n="title_ContactInfo">Información de contacto</h2>
+            <br>
+            <p><a href="mailto:felipeweilmar@gmail.com">felipeweilmar@gmail.com</a> (copy to clipboard)</p>
+            <br>
+            <a href="https://www.linkedin.com/in/felipe-weil-8b4062328?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bzz2eNYKAT%2BmgnpCFpg3GwQ%3D%3D" target="_blank">LinkedIn.com</a>
         </section>
     </body>
 </html>
