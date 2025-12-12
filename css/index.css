@@ -101,23 +101,6 @@ ul, ol {
     opacity: 0;
 }
 
-.end-txt {
-    color: var(--bg-color);
-    background-color: var(--subtle-color);
-    
-    padding: 10px 20px;
-    width: fit-content;
-
-    border-radius: var(--border-radius);
-}
-
-#semicolon {
-    position: absolute;
-    top: 50%;
-    left: 87.3%;
-    transform: translate(-50%, -50%);
-}
-
 
 
 
@@ -141,9 +124,6 @@ ul, ol {
 }
 
 #mar-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 2rem 25%;
 }
 
@@ -184,6 +164,10 @@ button {
     color: var(--genre-color);
 }
 
+button:hover, .game-card:hover {
+    box-shadow: 0px 0px 15px var(--contrast-color);
+}
+
 
 
 
@@ -194,6 +178,23 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.end-txt { /* start & end processes of flux diagram */
+    color: var(--bg-color);
+    background-color: var(--subtle-color);
+    
+    padding: 10px 20px;
+    width: fit-content;
+
+    border-radius: var(--border-radius);
+}
+
+#semicolon {
+    position: absolute;
+    top: 50%;
+    left: 87.3%;
+    transform: translate(-50%, -50%);
 }
 
 a.game-card {
@@ -217,10 +218,6 @@ a.game-card {
     flex-direction: row;
     gap: 5%;
     align-items: center;
-}
-
-.game-card:hover, button:hover {
-    box-shadow: 5px 5px 15px var(--contrast-color);
 }
 
 /* LINES */
