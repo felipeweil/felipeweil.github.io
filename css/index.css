@@ -56,7 +56,7 @@ section {
     margin: 2rem 0vw;
 }
 
-ul, ol, .tab {
+ul, ol, .keys {
     padding-left: var(--tab-size);
 }
 
@@ -71,6 +71,10 @@ ul, ol, .tab {
 
 
 /* TXT CLASSES */
+h1 {
+    font-size: 2rem;
+}
+
 .title-txt {
     font-size: var(--gameTitle-size);
     color: var(--title-color);
@@ -124,13 +128,9 @@ ul, ol, .tab {
     z-index: 1;
 }
 
-#mar-2 {
-    margin: 2rem 25%;
-}
-
 .div-cont {
     box-sizing: border-box;
-
+    
     margin-top: 1rem;
     /* margin-bottom: 1rem; */
     padding: 1rem;
@@ -174,6 +174,47 @@ button:hover, .game-card:hover {
     flex-direction: column;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.m-1 {
+    margin: 1rem;
+}
+
+.mv-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mv-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mh-25 {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#mh-4 {
+    margin-left: 4rem;
+}
+
+.bottom {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
 /* ID's */
 #home-btn {
     position: absolute;
@@ -182,7 +223,7 @@ button:hover, .game-card:hover {
 }
 
 #intro-cont {
-    margin-top: 12.5vh;
+    margin: 12.5vh 0px;
     min-height: 50vh;
 }
 
@@ -191,6 +232,47 @@ button:hover, .game-card:hover {
     min-height: 50vh;
     padding: 2rem 0px 0px 8.3%;
     background-color: var(--subtle-color);
+}
+
+/* COMMENTS, KEYS & REGIONS, PROGRAMMING LANGUAJE */
+.region::before {
+    content: "#region \A \A";
+    white-space: pre;
+}
+.region::after {
+    content: "\A #endregion";
+    white-space: pre;
+}
+.region::before, .region::after {
+    color: var(--subtle-color);
+    position: relative;
+    left: -2rem;
+}
+.region {
+    margin: 1rem 0rem;
+}
+
+.q {
+    position: relative;
+    margin-left: var(--tab-size);
+}
+.q .line-comment {
+    position: absolute;
+    left: -2rem;
+    color: var(--subtle-color);
+    pointer-events: none;
+}
+
+.keys::before {
+    content: "{";
+}
+.keys::after {
+    content: "}";
+}
+.keys::before, .keys::after {
+    color: var(--subtle-color);
+    position: relative;
+    left: -2rem;
 }
 
 

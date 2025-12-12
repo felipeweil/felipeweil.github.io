@@ -77,7 +77,47 @@ async function loadLanguage(lang) {
 
     // GUARDAR PREFERENCIA
     localStorage.setItem("lang", lang);
+
+    // AÑADIR "//" DE COMENTARIOS
+    addLineComments();
 }
+
+//#endregion
+
+//#region Q, intert comment //
+
+// Ejecutar cuando todo se haya renderizado
+window.addEventListener('resize', addLineComments);
+
+function addLineComments() {
+    const paragraphs = document.querySelectorAll('.q');
+
+    console.log(paragraphs);
+    
+
+    paragraphs.forEach(container => {
+        // Limpiar comentarios previos
+        container.querySelectorAll('.line-comment').forEach(span => span.remove());
+
+        // Recorremos solo nodos de texto directos y elementos de bloque
+        container.childNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE || node.nodeType === Node.ELEMENT_NODE  /* && node.tagName != 'br'*/) {
+                const range = document.createRange();
+                range.selectNodeContents(node);
+                const rects = range.getClientRects();
+
+                for (let rect of rects) {
+                    const comment = document.createElement('span');
+                    comment.className = 'line-comment';
+                    comment.textContent = '//';
+                    comment.style.top = `${rect.top - container.getBoundingClientRect().top}px`;
+                    container.appendChild(comment);
+                }
+            }
+        });
+    });
+}
+
 
 //#endregion
 });
