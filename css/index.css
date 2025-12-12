@@ -16,6 +16,7 @@
     --border-size: 0.2rem;
     --border-radius: 35px;
     --txt-weight: 600;
+    --tab-size: 2rem;
 
     --transition: 0.2s;
 }
@@ -55,8 +56,8 @@ section {
     margin: 2rem 0vw;
 }
 
-ul, ol {
-    padding-left: 2rem;
+ul, ol, .tab {
+    padding-left: var(--tab-size);
 }
 
 .no-color-transition * {
@@ -173,6 +174,26 @@ button:hover, .game-card:hover {
     flex-direction: column;
 }
 
+/* ID's */
+#home-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+#intro-cont {
+    margin-top: 12.5vh;
+    min-height: 50vh;
+}
+
+#footer-cont {
+    margin: 12.5vh 0px 0px 0px;
+    min-height: 50vh;
+    padding: 2rem 0px 0px 8.3%;
+    background-color: var(--subtle-color);
+}
+
+
 
 
 
@@ -212,7 +233,7 @@ a.game-card {
     border-width: var(--border-size);
     /* border-radius: var(--border-radius); */
     width: 50%;
-    height: 33.3vh;
+    min-height: 33.3vh;
     
     margin: 2rem 0px;
     padding: 2rem 2rem;
