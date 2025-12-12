@@ -245,6 +245,8 @@ button:hover, .game-card:hover {
 }
 .region::before, .region::after {
     color: var(--subtle-color);
+}
+.region.q::before, .region.q::after, .q .region::before, .q .region::after { 
     position: relative;
     left: -2rem;
 }
