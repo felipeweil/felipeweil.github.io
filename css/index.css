@@ -66,6 +66,9 @@ ul, ol {
 }
 
 
+
+
+
 /* TXT CLASSES */
 .title-txt {
     font-size: var(--gameTitle-size);
@@ -110,9 +113,13 @@ ul, ol {
 
 #semicolon {
     position: absolute;
-    top: 44%;
-    left: 85%;
+    top: 50%;
+    left: 87.3%;
+    transform: translate(-50%, -50%);
 }
+
+
+
 
 
 /* FORMAT CLASSES */
@@ -134,10 +141,15 @@ ul, ol {
 }
 
 #mar-2 {
-    margin: 2rem 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 25%;
 }
 
 .div-cont {
+    box-sizing: border-box;
+
     margin-top: 1rem;
     /* margin-bottom: 1rem; */
     padding: 1rem;
@@ -164,6 +176,19 @@ img {
     opacity: 1;
 }
 
+button {
+    background-color: var(--bg-color);
+    border-width: var(--border-size);
+    padding: 1rem;
+    border-color: var(--genre-color);
+    color: var(--genre-color);
+}
+
+
+
+
+
+/* PROJECTS CONTENT */
 .project-cont {
     display: flex;
     flex-direction: row;
@@ -176,13 +201,15 @@ a.game-card {
 }
 
 .game-card {
+    box-sizing: border-box;
     background-color: var(--bg-color);
     border-width: var(--border-size);
     /* border-radius: var(--border-radius); */
-    width: 50vw;
+    width: 50%;
+    height: 33.3vh;
     
-    margin: 35px 0px;
-    padding: 35px 5%;
+    margin: 2rem 0px;
+    padding: 2rem 2rem;
     
     transition: var(--transition);
     
@@ -196,22 +223,15 @@ a.game-card {
     box-shadow: 5px 5px 15px var(--contrast-color);
 }
 
-button {
-    background-color: var(--bg-color);
-    border-width: var(--border-size);
-    padding: 1rem;
-}
-
-
-
-/* LINE FORMAT CLASSES & ID'S */
-
+/* LINES */
 .parent {
     position: relative;
 }
 
 #table-of-cont {
-    width: 15%;
+    box-sizing: border-box;
+    width: 16.6%;
+    height: 12,5vh;
     display: flex;
     flex-direction: column;
     /* gap: 30px; */
@@ -244,10 +264,10 @@ button {
 
 .section-line {
     border-width: var(--border-size) var(--border-size) 0rem 0rem;
-    width: 7.5vw;
+    width: 8.2vw;
     height: 150px;
     border-top-right-radius: var(--border-radius);
-
+    
     position: absolute;
     top: 47%;
     left: 50%;
@@ -256,12 +276,13 @@ button {
 
 .enter-line {
     border-width: 0rem 0rem var(--border-size) var(--border-size);
-    width: 70vw;
+    /* box-sizing: border-box; */
+    width: 70.7%;
     height: 125px;
     border-bottom-left-radius: var(--border-radius);
     
     position: absolute;
-    left: 15vw;
+    left: 16.6%;
     bottom: 50%;
 
     z-index: -1;
@@ -269,6 +290,6 @@ button {
 
 .vert-line {
     width: var(--border-size);
-    height: 20px;
+    height: 2REM;
     background-color: var(--contrast-color);
 }
