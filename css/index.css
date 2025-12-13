@@ -6,36 +6,38 @@
 :root {
     --bg-color: #FDFCF7;
     --contrast-color: #010103;
+    --shadow-color: #01010381;
     --subtle-color: #BFBFBF;
     --title-color: #4FB3A4;
-    --genre-color: #8DA60F;
-    --strong-color: #C27076;
+    --genre-color: #C27076;
+    --strong-color: #8DA60F;
     --hover-color: #D498A3;
     
     --btn-bg-gradient: linear-gradient(180deg, #D7D7D3 0%, #FDFCF7 100%);
+    --btn-bg-active-gradient: linear-gradient(180deg, #b4b4b2 0%, #FDFCF7 100%);
+    --btn-borderbg-gradient: linear-gradient(180deg, #FDFCF7 5%, #7D7D7A 100%);
+    --btn-borderbg-active-gradient: linear-gradient(180deg, #d4d4d0 5%, #7D7D7A 100%);
     --btn-border-gradient: conic-gradient(
-        from 0deg at 50% 50%, 
-        #E7E6E2 -30.41deg,
-        #E7E6E2 0.15deg,
-        #E5E4DF 34.66deg, 
+        from 0deg at 50% 45%, 
+        #FDFCF700 34.66deg, 
         #FDFCF7 47.91deg, 
-        #D2D1CD 60.7deg, 
-        #A4A4A0 125.15deg,
-        #D4D3CD 136.19deg, 
-        #969592 145.16deg, 
-        #7D7D7A 180deg, 
-        #92918E 208.8deg, 
-        #D4D3CD 224.75deg, 
-        #A6A5A1 236.91deg, 
-        #D5D4CF 303.29deg, 
+        #FDFCF700 60.7deg, 
+        #FDFCF700 125.15deg,
+        #fdfcf7a8 136.19deg, 
+        #FDFCF700 145.16deg, 
+        #FDFCF700 208.8deg, 
+        #FDFCF7a8 224.75deg, 
+        #FDFCF700 236.91deg, 
+        #FDFCF700 303.29deg, 
         #FDFCF7 316.23deg, 
-        #E7E6E2 329.59deg, 
-        #E7E6E2 360.15deg
+        #FDFCF700 329.59deg, 
+        #FDFCF700 360.15deg
     );
 
     --gameTitle-size: 1.5rem;
     --border-size: 0.2rem;
     --border-radius: 35px;
+    --btn-border-radius: 12px;
     --txt-weight: 600;
     --tab-size: 2rem;
 
@@ -45,26 +47,31 @@
 :root.dark {
     --bg-color: #010103;
     --contrast-color: #FDFCF7;
+    --shadow-color: #FDFCF781;
     --subtle-color: #404040;
 
-    --btn-bg-gradient: linear-gradient(180deg, #3D3D3C 0%, #1A1919 100%);
+    --btn-bg-gradient: linear-gradient(180deg, #1A1919 0%, #3D3D3C 100%);
+    --btn-bg-active-gradient: linear-gradient(180deg, #0f0f0f 0%, #2c2c2c 100%);
+    --btn-borderbg-gradient: linear-gradient(180deg, #1A1919 5%, #0f0f0f 100%);
+    --btn-borderbg-active-gradient: linear-gradient(180deg, #0f0f0f 5%, #000000 100%);
     --btn-border-gradient: conic-gradient(
-        from 0deg at 50% 50%, 
-        #1A1A18 -30.41deg, #333332 0.15deg, 
-        #171716 34.66deg, 
+        from 0deg at 50% 45%, 
+        #66666400 -30.41deg,
+        #66666400 0.15deg, 
+        #66666400 34.66deg, 
         #666664 47.91deg, 
-        #292928 60.7deg, 
-        #212120 125.15deg, 
-        #4D4C4A 136.19deg, 
-        #1C1C1B 145.16deg, 
-        #1A1919 180deg, 
-        #1C1C1B 208.8deg, 
-        #4D4C4A 224.75deg, 
-        #212120 236.91deg, 
-        #292928 303.29deg, 
+        #66666400 60.7deg, 
+        #66666400 125.15deg, 
+        #666664a8 136.19deg, 
+        #66666400 145.16deg, 
+        #66666400 180deg, 
+        #66666400 208.8deg, 
+        #666664a8 224.75deg, 
+        #66666400 236.91deg, 
+        #66666400 303.29deg, 
         #666664 316.23deg, 
-        #1A1A18 329.59deg, 
-        #333332 360.15deg
+        #66666400 329.59deg, 
+        #66666400 360.15deg
     );
 }
 
@@ -234,44 +241,124 @@ button {
     
     /* z-index: 0; */
 }
+button:hover, .game-card:hover/*, .diamond:hover */ {
+    box-shadow: 0px 0px 15px var(--shadow-color);
+    transform: scale(1.03);
+}
 
 .btn {
     position: relative;
-    /* z-index: 1; */
-    /* isolation: isolate; */
     
     width: fit-content;
     height: fit-content;
     padding: 1rem;
     
     background: var(--btn-bg-gradient);
-    border-radius: 12px;
+    border-radius: var(--btn-border-radius);
     margin: 7px 10px 15px 10px;
-    /* border-width: 5px 10px 15px 10px;
-    border-image: var(--btn-border-gradient) 1; */
         
     /* Auto layout */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+    overflow: hidden; /* máscara para el fondo (::before) */
 }
 .btn::before {
     content: "";
     position: absolute;
-    inset: -7px -10px -15px -10px;
-    border-radius: inherit;
+    inset: -1rem;
+    background: var(--btn-bg-gradient);
+    transition: var(--transition);
+} 
+
+
+
+
+.mask-container {
+    position: relative;
+    display: inline-block;
+
+    border-radius: var(--btn-border-radius);
+}
+.mask-container::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border-radius: var(--btn-border-radius);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    z-index: -1;
+}
+
+
+.mask {
+    position: absolute;
+    inset: 0px; /* más grande que el botón */
+    border-radius: var(--btn-border-radius);
+    overflow: hidden; /* define los límites */
+    z-index: 0;
+}
+.mask::before { /* brillo de las esquinas */
+    content: "";
+    position: absolute;
+    inset: -1rem;
     background: var(--btn-border-gradient);
     
-    z-index: -1;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-
     transition: var(--transition);
 }
-button:hover, .game-card:hover, .btn:hover::before {
-    box-shadow: 0px 0px 15px var(--contrast-color);
+.mask::after { /* linear gradient debajo del brillo de las esquinas (el que gira) */
+    content: "";
+    position: absolute;
+    inset: -1rem;
+    background: var(--btn-borderbg-gradient);
+    z-index: -1;
+    
+    animation: spin 5s ease-in-out infinite;
 }
+
+.mask-container:hover, .mask-container:hover .mask::after, .mask-container:hover .btn::before {
+    box-shadow: 0px 0px 15px var(--shadow-color);
+    transform: scale(1.1);
+}
+
+.mask-container:active .btn::before {
+    background: var(--btn-bg-active-gradient);
+    
+}
+.mask-container:active .mask::after {
+    background: var(--btn-borderbg-active-gradient);
+    
+}
+.mask-container:active {
+    transform: scale(0.9);
+    box-shadow: 0px 0px 15px #00000000;
+}
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .full-width {
     width: 100%;
@@ -523,10 +610,6 @@ a.game-card {
     background-color: var(--contrast-color);
     transform: rotate(30deg) skew(-30deg);
     /* z-index: 2; */
-}
-
-.diamond:hover {
-    box-shadow: 5px 5px 15px var(--contrast-color);
 }
 
 #open {
