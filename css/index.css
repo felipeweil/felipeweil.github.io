@@ -193,6 +193,7 @@ h1 {
 /* FORMAT CLASSES */
 .div-cont {
     box-sizing: border-box;
+    background-color: var(--bg-color);
     
     margin-top: 1rem;
     /* margin-bottom: 1rem; */
@@ -203,7 +204,7 @@ h1 {
     box-shadow: 0px 0px 5px #0000001c;
 }
 
-img {
+img, #img-border {
     /* width: 145px;
     height: 145px; */
     border: var(--border-size) solid #00000000;
@@ -214,11 +215,8 @@ img {
     width: fit-content;
 }
 
-.img-cont:hover img{
+.img-cont:hover .img-txt, .img-cont:hover #img-border{
     border-color: var(--contrast-color);
-}
-
-.img-cont:hover .img-txt{
     opacity: 1;
 }
 
@@ -228,8 +226,8 @@ button {
     border-color: #00000000;
     
     /* color: var(--genre-color); */
-    border-radius: 12px;
-    border-width: var(--border-size);
+    border-radius: var(--btn-border-radius);
+    border-width: 2px 2px var(--border-size) 2px;
     
 
     padding: 1rem;
@@ -243,10 +241,6 @@ button {
     padding: 1rem;
     
     /* z-index: 0; */
-}
-.game-card:hover/*, .diamond:hover */ {
-    box-shadow: 0px 0px 10px var(--shadow-color);
-    transform: scale(1.03);
 }
 button:hover {
     transform: scale(1.03);
@@ -361,6 +355,18 @@ button:active {
     }
 }
 
+.parallax-1 {
+    position: absolute;
+    z-index: -1;
+    opacity: 50%;
+}
+.parallax-2 {
+    position: absolute;
+    z-index: -2;
+    opacity: 25%;
+
+    left: 50%;
+}
 
 
 
@@ -373,9 +379,14 @@ button:active {
 
 
 
+/* BOOTSTRAP MANUAL */
 .full-width {
     width: 100%;
     box-sizing: border-box;
+}
+
+.fit-content {
+    width: fit-content;
 }
 
 .flex-column {
@@ -599,6 +610,27 @@ a.game-card {
     flex-direction: row;
     gap: 5%;
     align-items: center;
+}
+.game-card:hover/*, .diamond:hover */ {
+    box-shadow: 0px 0px 10px var(--shadow-color);
+    transform: scale(1.03);
+    img {
+        animation: spin-img 5s linear infinite;
+    }
+}
+.game-card:active/*, .diamond:hover */ {
+    box-shadow: 0px 0px 10px var(--shadow-color);
+    border-color: var(--subtle-color);
+    transform: scale(1.03);
+}
+
+@keyframes spin-img {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* LINES */

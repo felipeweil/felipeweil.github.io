@@ -120,4 +120,14 @@ function addLineComments() {
 
 
 //#endregion
+
+//#region Parallax
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  document.querySelector('.parallax-1').style.transform = `translateY(${scrollY * 0.3}px) scale(0.75)`;
+  document.querySelector('.parallax-2').style.transform = `translateY(${scrollY * 0.6}px) scale(0.50)`;
+});
+
+//#endregion
 });
