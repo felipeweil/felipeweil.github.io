@@ -12,28 +12,28 @@ document.documentElement.classList.add("no-color-transition");
 
 // CONTROLAR EL TEMA PREESTABLECIDO
 if (savedTheme) {
-    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    document.documentElement.classList.toggle("light", savedTheme === "light");
 } else {
     // Primera visita: seguir preferencia del sistema
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    document.documentElement.classList.toggle("dark", prefersDark);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: light)").matches;
+    document.documentElement.classList.toggle("light", prefersDark);
 }
 
 // CAMBIAR EL TEMA SEGÚN LA PREFERENCIA DEL USUARIO
-if (savedTheme === "dark") {
-    document.documentElement.classList.remove("light");
-} else if (savedTheme === "light") {
-    document.documentElement.classList.add("light");
+if (savedTheme === "light") {
+    document.documentElement.classList.remove("dark");
+} else if (savedTheme === "dark") {
+    document.documentElement.classList.add("dark");
 }
 
 // CAMBIAR EL TEMA CON EL BOTÓN
 const toggleBtn = document.getElementById("toggle-theme");
 toggleBtn.addEventListener("click", () => {
-    document.documentElement.classList.toggle("light");
+    document.documentElement.classList.toggle("dark");
 
     // Guarda la preferencia
-    const isLight = document.documentElement.classList.contains("light");
-    localStorage.setItem("theme", isLight ? "light" : "dark");
+    const isDark = document.documentElement.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
 // Elimina la clase justo después de pintar el frame inicial

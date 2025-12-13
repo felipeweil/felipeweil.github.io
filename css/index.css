@@ -4,13 +4,14 @@
 }
 
 :root {
-    --bg-color: #010103;
-    --contrast-color: #FDFCF7;
-    --subtle-color: #404040;
+    --bg-color: #FDFCF7;
+    --contrast-color: #010103;
+    --subtle-color: #BFBFBF;
     --title-color: #4FB3A4;
     --genre-color: #8DA60F;
     --strong-color: #C27076;
     --hover-color: #D498A3;
+    
     --btn-bg-gradient: linear-gradient(180deg, #D7D7D3 0%, #FDFCF7 100%);
     --btn-border-gradient: conic-gradient(
         from 0deg at 50% 50%, 
@@ -29,7 +30,8 @@
         #D5D4CF 303.29deg, 
         #FDFCF7 316.23deg, 
         #E7E6E2 329.59deg, 
-        #E7E6E2 360.15deg);
+        #E7E6E2 360.15deg
+    );
 
     --gameTitle-size: 1.5rem;
     --border-size: 0.2rem;
@@ -40,10 +42,30 @@
     --transition: 0.2s;
 }
 
-:root.light {
-    --bg-color: #FDFCF7;
-    --contrast-color: #010103;
-    --subtle-color: #BFBFBF;
+:root.dark {
+    --bg-color: #010103;
+    --contrast-color: #FDFCF7;
+    --subtle-color: #404040;
+
+    --btn-bg-gradient: linear-gradient(180deg, #3D3D3C 0%, #1A1919 100%);
+    --btn-border-gradient: conic-gradient(
+        from 0deg at 50% 50%, 
+        #1A1A18 -30.41deg, #333332 0.15deg, 
+        #171716 34.66deg, 
+        #666664 47.91deg, 
+        #292928 60.7deg, 
+        #212120 125.15deg, 
+        #4D4C4A 136.19deg, 
+        #1C1C1B 145.16deg, 
+        #1A1919 180deg, 
+        #1C1C1B 208.8deg, 
+        #4D4C4A 224.75deg, 
+        #212120 236.91deg, 
+        #292928 303.29deg, 
+        #666664 316.23deg, 
+        #1A1A18 329.59deg, 
+        #333332 360.15deg
+    );
 }
 
 
