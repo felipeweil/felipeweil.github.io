@@ -90,10 +90,7 @@ async function loadLanguage(lang) {
 window.addEventListener('resize', addLineComments);
 
 function addLineComments() {
-    const paragraphs = document.querySelectorAll('.q');
-
-    console.log(paragraphs);
-    
+    const paragraphs = document.querySelectorAll('.q');    
 
     paragraphs.forEach(container => {
         // Limpiar comentarios previos

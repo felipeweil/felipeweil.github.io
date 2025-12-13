@@ -191,6 +191,10 @@ h1 {
 
 
 /* FORMAT CLASSES */
+.mobile {
+    display: none;
+}
+
 .div-cont {
     box-sizing: border-box;
     background-color: var(--bg-color);
@@ -398,8 +402,8 @@ button:active {
 .flex-row {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-    /* flex-wrap: wrap; */
+    gap: 1rem 2rem;
+    flex-wrap: wrap;
     /* justify-content: space-around; */
     /* flex-wrap: wrap; */
 }
@@ -458,10 +462,15 @@ button:active {
     padding-right: 2rem;
 }
 
+.flex-start{
+    align-self: flex-start;
+    margin-right: auto;
+}
 .bottom {
-    position: absolute;
+    align-self: flex-end baseline;
+    /* position: absolute;
     left: 0px;
-    bottom: 0px;
+    bottom: 0px; */
 }
 
 .z-1 {
@@ -698,4 +707,106 @@ a.game-card {
     width: var(--border-size);
     height: 2REM;
     background-color: var(--contrast-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY's */
+
+/* Tablet grande (máx. 1024px) */
+@media (max-width: 1024px) {
+    button {
+        background: var(--btn-bg-gradient);
+        border-color: var(--subtle-color);
+    }
+    button:hover {
+        /* transform: scale(1.03); */
+        box-shadow: 0px 0px 10px var(--shadow-color);
+    }
+
+    .mh-25 {
+       margin-left: 10%; 
+       margin-right: 10%; 
+    }
+    
+    .bottom {
+        position: relative;
+        padding: 0px;
+    }
+
+    .game-card {
+        width: 80%;
+        flex-direction: column;
+        img {
+            animation: spin-img 5s linear infinite;
+        }
+    }
+
+    #table-of-cont{
+        width: 100%;
+    }
+    .section-line, .enter-line, #semicolon{
+        display: none;
+    }
+    
+    .mobile {
+        display: block;
+        position: absolute;
+        top: 6rem;
+        height: 10rem;
+        z-index: -1;
+    }
+
+    #footer-cont {
+        padding: 2rem 10%;
+    }
+
+    /* #table-of-cont{
+        width: 10%;
+    }
+    .section-line {
+        display: none;
+    }
+    .enter-line {
+        width: 90%;
+        left: 5%;
+        height: 17rem;
+    }
+    #semicolon {
+        left: 95%;
+    } */
+}
+
+/* Nivel 2: Tablet pequeña / móvil grande (máx. 768px) */
+@media (max-width: 768px) {
+    html {
+        font-size: 1.75vh;
+    }
+}
+
+/* Nivel 3: Móvil pequeño (máx. 480px) */
+@media (max-width: 480px) {
+
 }
