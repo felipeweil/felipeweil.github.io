@@ -11,6 +11,25 @@
     --genre-color: #8DA60F;
     --strong-color: #C27076;
     --hover-color: #D498A3;
+    --btn-bg-gradient: linear-gradient(180deg, #D7D7D3 0%, #FDFCF7 100%);
+    --btn-border-gradient: conic-gradient(
+        from 0deg at 50% 50%, 
+        #E7E6E2 -30.41deg,
+        #E7E6E2 0.15deg,
+        #E5E4DF 34.66deg, 
+        #FDFCF7 47.91deg, 
+        #D2D1CD 60.7deg, 
+        #A4A4A0 125.15deg,
+        #D4D3CD 136.19deg, 
+        #969592 145.16deg, 
+        #7D7D7A 180deg, 
+        #92918E 208.8deg, 
+        #D4D3CD 224.75deg, 
+        #A6A5A1 236.91deg, 
+        #D5D4CF 303.29deg, 
+        #FDFCF7 316.23deg, 
+        #E7E6E2 329.59deg, 
+        #E7E6E2 360.15deg);
 
     --gameTitle-size: 1.5rem;
     --border-size: 0.2rem;
@@ -100,10 +119,31 @@ h1 {
     
     padding: 5px 10px;
     width: fit-content;
-
+    
     position: absolute;
     bottom: 100%;
     opacity: 0;
+}
+
+/* ICONS */
+.icon {
+   /* Add dimensions to span */
+   display: inline-block;
+   width: 1.5rem;
+   height: 1.5rem;
+
+   /* Add background image */
+   background-color: var(--contrast-color);
+
+   -webkit-mask-repeat: no-repeat;
+   mask-repeat: no-repeat;
+   -webkit-mask-size: 100% 100%;
+   mask-size: 100% 100%;
+}
+#linkedin {
+   --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' d='M27.26 27.271h-4.733v-7.427c0-1.771-.037-4.047-2.475-4.047c-2.468 0-2.844 1.921-2.844 3.916v7.557h-4.739V11.999h4.552v2.083h.061c.636-1.203 2.183-2.468 4.491-2.468c4.801 0 5.692 3.161 5.692 7.271v8.385zM7.115 9.912a2.75 2.75 0 0 1-2.751-2.756a2.753 2.753 0 1 1 2.751 2.756m2.374 17.359H4.74V12h4.749zM29.636 0H2.36C1.057 0 0 1.031 0 2.307v27.387c0 1.276 1.057 2.307 2.36 2.307h27.271c1.301 0 2.369-1.031 2.369-2.307V2.307C32 1.031 30.932 0 29.631 0z'/%3E%3C/svg%3E");
+   -webkit-mask-image: var(--svg);
+   mask-image: var(--svg);
 }
 
 
@@ -111,23 +151,6 @@ h1 {
 
 
 /* FORMAT CLASSES */
-#sticky {
-    background-color: var(--bg-color);
-    margin: 0%;
-    padding: 1rem;
-    border-width: 1px;
-    position: sticky;
-    top: 0;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
-    z-index: 1;
-}
-
 .div-cont {
     box-sizing: border-box;
     
@@ -158,20 +181,69 @@ img {
 }
 
 button {
-    background-color: var(--bg-color);
+    position: relative;
+    /* background-color: var(--bg-color); */
+    background: var(--btn-bg-gradient);
+    /* color: var(--genre-color); */
+    border-radius: 12px;
     border-width: var(--border-size);
+    border-color: var(--subtle-color);
+
     padding: 1rem;
-    border-color: var(--genre-color);
-    color: var(--genre-color);
+    /* border-image: var(--btn-border-gradient) 1; */
+        
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    
+    /* z-index: 0; */
 }
 
-button:hover, .game-card:hover {
+.btn {
+    position: relative;
+    /* z-index: 1; */
+    /* isolation: isolate; */
+    
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    
+    background: var(--btn-bg-gradient);
+    border-radius: 12px;
+    margin: 7px 10px 15px 10px;
+    /* border-width: 5px 10px 15px 10px;
+    border-image: var(--btn-border-gradient) 1; */
+        
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: -7px -10px -15px -10px;
+    border-radius: inherit;
+    background: var(--btn-border-gradient);
+    
+    z-index: -1;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+
+    transition: var(--transition);
+}
+button:hover, .game-card:hover, .btn:hover::before {
     box-shadow: 0px 0px 15px var(--contrast-color);
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .flex-row {
@@ -180,6 +252,13 @@ button:hover, .game-card:hover {
     gap: 2rem;
     /* flex-wrap: wrap; */
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .w-100 {
@@ -215,7 +294,34 @@ button:hover, .game-card:hover {
     bottom: 0px;
 }
 
+.z-1 {
+    position: relative;
+    z-index: 1;
+}
+
+.z-2 {
+    position: relative;
+    z-index: 2;
+}
+
 /* ID's */
+#sticky {
+    background-color: var(--bg-color);
+    margin: 0%;
+    padding: 1rem;
+    border-width: 1px;
+    position: sticky;
+    top: 0;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+    z-index: 1;
+}
+
 #home-btn {
     position: absolute;
     top: 1rem;
@@ -232,6 +338,8 @@ button:hover, .game-card:hover {
     min-height: 50vh;
     padding: 2rem 0px 0px 8.3%;
     background-color: var(--subtle-color);
+    
+    position: relative;
 }
 
 /* COMMENTS, KEYS & REGIONS, PROGRAMMING LANGUAJE */
@@ -245,6 +353,7 @@ button:hover, .game-card:hover {
 }
 .region::before, .region::after {
     color: var(--subtle-color);
+    transition: var(--transition);
 }
 .region.q::before, .region.q::after, .q .region::before, .q .region::after { 
     position: relative;
@@ -275,7 +384,10 @@ button:hover, .game-card:hover {
     color: var(--subtle-color);
     position: relative;
     left: -2rem;
+    transition: var(--transition);
 }
+
+
 
 
 
