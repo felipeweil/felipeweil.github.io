@@ -162,10 +162,21 @@ h1 {
    -webkit-mask-size: 100% 100%;
    mask-size: 100% 100%;
 }
+#mail {
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7.175q.125 0 .263-.038t.262-.112L19.6 8.25q.2-.125.3-.312t.1-.413q0-.5-.425-.75T18.7 6.8L12 11L5.3 6.8q-.45-.275-.875-.012T4 7.525q0 .25.1.438t.3.287l7.075 4.425q.125.075.263.113t.262.037'/%3E%3C/svg%3E");
+    -webkit-mask-image: var(--svg);
+   mask-image: var(--svg);
+
+    /* https://icon-sets.iconify.design/material-symbols/?keyword=material+s */
+}
 #linkedin {
    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' d='M27.26 27.271h-4.733v-7.427c0-1.771-.037-4.047-2.475-4.047c-2.468 0-2.844 1.921-2.844 3.916v7.557h-4.739V11.999h4.552v2.083h.061c.636-1.203 2.183-2.468 4.491-2.468c4.801 0 5.692 3.161 5.692 7.271v8.385zM7.115 9.912a2.75 2.75 0 0 1-2.751-2.756a2.753 2.753 0 1 1 2.751 2.756m2.374 17.359H4.74V12h4.749zM29.636 0H2.36C1.057 0 0 1.031 0 2.307v27.387c0 1.276 1.057 2.307 2.36 2.307h27.271c1.301 0 2.369-1.031 2.369-2.307V2.307C32 1.031 30.932 0 29.631 0z'/%3E%3C/svg%3E");
    -webkit-mask-image: var(--svg);
    mask-image: var(--svg);
+
+   background-color: #3297be;
+
+   /* https://icon-sets.iconify.design/cib/?keyword=coreui */
 }
 
 
@@ -262,6 +273,11 @@ button:hover, .game-card:hover, .btn:hover::before {
     box-shadow: 0px 0px 15px var(--contrast-color);
 }
 
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -273,13 +289,18 @@ button:hover, .game-card:hover, .btn:hover::before {
     flex-direction: row;
     gap: 2rem;
     /* flex-wrap: wrap; */
-    justify-content: space-around;
-    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
+}
+
+.justify-right {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .align-center {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -308,6 +329,22 @@ button:hover, .game-card:hover, .btn:hover::before {
 
 #mh-4 {
     margin-left: 4rem;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+.p-2 {
+    padding: 2rem;
+}
+
+.pv-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+} 
+.ph-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .bottom {
