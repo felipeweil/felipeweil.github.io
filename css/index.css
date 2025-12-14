@@ -408,6 +408,10 @@ button:active {
     /* flex-wrap: wrap; */
 }
 
+.g-0 {
+    gap: 0rem;
+}
+
 .justify-right {
     display: flex;
     justify-content: flex-end;
@@ -466,10 +470,10 @@ button:active {
     align-self: flex-start;
     margin-right: auto;
 }
-.bottom {
-    align-self: flex-end baseline;
+.flex-end {
+    /* align-self: flex-end; */
+    margin-top: auto;
     /* position: absolute;
-    left: 0px;
     bottom: 0px; */
 }
 
