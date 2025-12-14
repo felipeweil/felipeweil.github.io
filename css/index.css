@@ -33,7 +33,20 @@
         #FDFCF700 329.59deg, 
         #FDFCF700 360.15deg
     );
-    --game-borderbg-gradient: linear-gradient(180deg, #d6e68b 10%, #4FB3A4 90%);
+    /* --game-borderbg-gradient: conic-gradient(
+        from 180deg at 50% 50%,
+        #b1cc28 0deg, 
+        var(--contrast-color) 90deg, 
+        var(--contrast-color) 270deg, 
+        #b1cc28 360deg
+    ); */
+    --game-borderbg-gradient: conic-gradient(
+        from 180deg at 50% 50%,
+        var(--subtle-color) 0deg, 
+        var(--contrast-color) 90deg, 
+        var(--contrast-color) 270deg, 
+        var(--subtle-color) 360deg
+    );
 
     --gameTitle-size: 1.5rem;
     --border-size: 0.2rem;
@@ -73,6 +86,14 @@
         #666664 316.23deg, 
         #66666400 329.59deg, 
         #66666400 360.15deg
+    );
+
+    --game-borderbg-gradient: conic-gradient(
+        from 180deg at 50% 50%,
+        var(--contrast-color) 0deg, 
+        var(--subtle-color) 90deg, 
+        var(--subtle-color) 270deg, 
+        var(--contrast-color) 360deg
     );
 }
 
@@ -678,7 +699,8 @@ a.game-card {
     content: "";
     position: absolute;
     inset: 0px;
-    box-shadow: 0 5px 5px #8da60f2d;
+    box-shadow: 0 5px 5px #0000002d;
+    /* box-shadow: 0 5px 5px #8da60f2d; */
     z-index: -1;
 }
 
@@ -696,7 +718,7 @@ a.game-card {
     background: var(--game-borderbg-gradient);
     z-index: -1;
     
-    animation: game-spin 10s ease-in-out infinite;
+    animation: game-spin 10s linear infinite;
 }
 
 
