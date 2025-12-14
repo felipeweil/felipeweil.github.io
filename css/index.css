@@ -143,7 +143,7 @@ h1 {
 }
 
 .img-txt {
-    color: var(--bg-color);
+    color: var(--subtle-color);
     background-color: var(--contrast-color);
     
     padding: 5px 10px;
@@ -152,6 +152,11 @@ h1 {
     position: absolute;
     bottom: 100%;
     opacity: 0;
+}
+
+.small-txt {
+    color: var(--subtle-color);
+    font-size: 0.75rem;
 }
 
 /* ICONS */
@@ -411,6 +416,14 @@ button:active {
 .g-0 {
     gap: 0rem;
 }
+.g-0w5 {
+    gap: 0.5rem;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
 
 .justify-right {
     display: flex;
@@ -519,7 +532,7 @@ button:active {
 #footer-cont {
     margin: 12.5vh 0px 0px 0px;
     min-height: 50vh;
-    padding: 2rem 0px 0px 8.3%;
+    padding: 2rem 25%;
     background-color: var(--subtle-color);
     
     position: relative;
