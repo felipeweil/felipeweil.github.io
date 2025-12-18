@@ -881,14 +881,12 @@ a.game-card {
        margin-left: 10%; 
        margin-right: 10%; 
     }
-    
-    .bottom {
-        position: relative;
-        padding: 0px;
-    }
 
-    .game-card {
+    .game-container {
         width: 80%;
+        
+    }
+    .game-card {
         flex-direction: column;
         img {
             animation: spin-img 5s linear infinite;

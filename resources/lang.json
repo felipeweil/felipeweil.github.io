@@ -82,7 +82,7 @@
   {
     "Key": "txt_Coloratura_Description",
     "EN": "",
-    "ES": "<span class=\"subtle-txt\">&emsp;&emsp;&emsp;&emsp;/* </span>\nUna <span class=\"genre-txt\">aventura narrativa</span> diseñada para ser jugada sin elementos visuales. Es interesante y divertido tanto para <span class=\"strong-txt\">jugadores invidentes</span> como videntes.\n<span class=\"subtle-txt\"> */</span>"
+    "ES": "Una <span class=\"genre-txt\">aventura narrativa</span> diseñada para ser jugada sin elementos visuales. Es interesante y divertido tanto para <span class=\"strong-txt\">jugadores invidentes</span> como videntes.\n<span class=\"subtle-txt\"> */</span>"
   },
   {
     "Key": "",
