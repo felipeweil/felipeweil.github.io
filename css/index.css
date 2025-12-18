@@ -6,7 +6,7 @@
 :root {
     --bg-color: #FDFCF7;
     --contrast-color: #010103;
-    --shadow-color: #01010381;
+    --shadow-color: hsl(51deg 16% 72% / 0.2);
     --subtle-color: #BFBFBF;
     --title-color: #4FB3A4;
     --genre-color: #C27076;
@@ -32,51 +32,63 @@
         #FDFCF7 316.23deg, 
         #FDFCF700 329.59deg, 
         #FDFCF700 360.15deg
-    );
-    /* --game-borderbg-gradient: conic-gradient(
-        from 180deg at 50% 50%,
-        #b1cc28 0deg, 
-        var(--contrast-color) 90deg, 
-        var(--contrast-color) 270deg, 
-        #b1cc28 360deg
-    ); */
-    --game-borderbg-gradient: conic-gradient(
-        from 180deg at 50% 50%,
-        var(--subtle-color) 0deg, 
-        var(--contrast-color) 90deg, 
-        var(--contrast-color) 270deg, 
-        var(--subtle-color) 360deg
-    );
-
+        );
+        --game-borderbg-gradient: conic-gradient(
+            from 180deg at 50% 50%,
+            var(--subtle-color) 0deg, 
+            var(--contrast-color) 90deg, 
+            var(--contrast-color) 270deg, 
+            var(--subtle-color) 360deg
+            );
+            
+            --shadow-low:
+            0 1px 1px var(--shadow-color),
+            0 2px 2px var(--shadow-color),
+            0 4px 4px var(--shadow-color)
+            ;
+            --shadow-mid:
+            0 1px 1px var(--shadow-color),
+            0 2px 2px var(--shadow-color),
+            0 4px 4px var(--shadow-color),
+            0 8px 8px var(--shadow-color)
+            ;
+    --shadow-high:
+    0 1px 1px var(--shadow-color),
+    0 2px 2px var(--shadow-color),
+    0 4px 4px var(--shadow-color),
+    0 8px 8px var(--shadow-color),
+    0 16px 16px var(--shadow-color),
+    0 32px 32px var(--shadow-color)
+    ;
+    
     --gameTitle-size: 1.5rem;
     --border-size: 0.2rem;
     --border-radius: 35px;
     --btn-border-radius: 12px;
     --txt-weight: 600;
     --tab-size: 2rem;
-
+    
     --transition: 0.2s;
 }
-
 :root.dark {
-    --bg-color: #010103;
-    --contrast-color: #FDFCF7;
-    --shadow-color: #FDFCF781;
-    --subtle-color: #404040;
-
-    --btn-bg-gradient: linear-gradient(180deg, #1A1919 0%, #3D3D3C 100%);
-    --btn-bg-active-gradient: linear-gradient(180deg, #0f0f0f 0%, #2c2c2c 100%);
-    --btn-borderbg-gradient: linear-gradient(180deg, #1A1919 5%, #0f0f0f 100%);
-    --btn-borderbg-active-gradient: linear-gradient(180deg, #0f0f0f 5%, #000000 100%);
-    --btn-border-gradient: conic-gradient(
-        from 0deg at 50% 45%, 
-        #66666400 -30.41deg,
-        #66666400 0.15deg, 
-        #66666400 34.66deg, 
-        #666664 47.91deg, 
-        #66666400 60.7deg, 
-        #66666400 125.15deg, 
-        #666664a8 136.19deg, 
+        --bg-color: #010103;
+        --contrast-color: #FDFCF7;
+        --shadow-color: hsla(48, 6%, 16%, 0.2);
+        --subtle-color: #404040;
+        
+        --btn-bg-gradient: linear-gradient(180deg, #1A1919 0%, #3D3D3C 100%);
+        --btn-bg-active-gradient: linear-gradient(180deg, #0f0f0f 0%, #2c2c2c 100%);
+        --btn-borderbg-gradient: linear-gradient(180deg, #1A1919 5%, #0f0f0f 100%);
+        --btn-borderbg-active-gradient: linear-gradient(180deg, #0f0f0f 5%, #000000 100%);
+        --btn-border-gradient: conic-gradient(
+            from 0deg at 50% 45%, 
+            #66666400 -30.41deg,
+            #66666400 0.15deg, 
+            #66666400 34.66deg, 
+            #666664 47.91deg, 
+            #66666400 60.7deg, 
+            #66666400 125.15deg, 
+            #666664a8 136.19deg, 
         #66666400 145.16deg, 
         #66666400 180deg, 
         #66666400 208.8deg, 
@@ -233,10 +245,10 @@ h1 {
     margin-top: 1rem;
     /* margin-bottom: 1rem; */
     padding: 2rem;
-    border-width: 1px;
+    /* border-width: 1px; */
     border-color: var(--subtle-color);
 
-    box-shadow: 0px 0px 5px #0000001c;
+    box-shadow: var(--shadow-mid);
 }
 
 img, #img-border {
@@ -330,7 +342,7 @@ button:active {
     position: absolute;
     inset: 0px;
     border-radius: var(--btn-border-radius);
-    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    box-shadow: var(--shadow-mid);
     z-index: 0;
 }
 
@@ -361,19 +373,20 @@ button:active {
 }
 
 .mask-container:hover, .mask-container:hover .mask::after, .mask-container:hover .btn::before {
-    box-shadow: 0px 5px 10px var(--shadow-color);
     transform: scale(1.1);
+    /* box-shadow: 0px 5px 10px var(--shadow-color); */
+    box-shadow: var(--shadow-high);
 }
 
-.mask-container:active .btn::before {
+/* .mask-container:active .btn::before {
     background: var(--btn-bg-active-gradient);
-}
+} */
 .mask-container:active .mask::after {
     background: var(--btn-borderbg-active-gradient);
 }
 .mask-container:active {
     transform: scale(0.9);
-    box-shadow: 0px 0px 15px #00000000;
+    box-shadow: var(--shadow-low);
 }
 
 
@@ -543,7 +556,8 @@ button:active {
     background-color: var(--bg-color);
     margin: 0%;
     padding: 1rem;
-    border-width: 1px;
+    /* border-width: 1px; */
+    box-shadow: var(--shadow-mid);
     position: sticky;
     top: 0;
     
@@ -674,14 +688,14 @@ button:active {
     margin: 2rem 0px;
 }
 .game-container:hover {
-    box-shadow: 0px 5px 20px var(--shadow-color);
+    box-shadow: var(--shadow-high);
     transform: scale(1.03);
     img {
         animation: spin-img 5s linear infinite;
     }
 }
 .game-container:active {
-    box-shadow: 0px 0px 10px var(--shadow-color);
+    box-shadow: var(--shadow-mid);
     transform: scale(1);
 }
 
@@ -727,8 +741,7 @@ a.game-card {
     content: "";
     position: absolute;
     inset: 0px;
-    box-shadow: 0 5px 5px #0000002d;
-    /* box-shadow: 0 5px 5px #8da60f2d; */
+    box-shadow: var(--shadow-mid);
     z-index: -1;
 }
 
